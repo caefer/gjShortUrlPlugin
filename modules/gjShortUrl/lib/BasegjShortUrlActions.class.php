@@ -14,7 +14,7 @@ abstract class BasegjShortUrlActions extends sfActions
   {
     $shortUrl = $this->getRoute()->getObject();
     $target = ltrim($shortUrl->target, '@');
-    if('/' != $shortUrl->target[0])
+    if('/' != $shortUrl->target[0] && !preg_match('#^[a-z][a-z0-9\+.\-]*\://#i', $target))
     {
       $params = array_merge($request->getParameterHolder()->getAll(), array('sf_route' => $target));
       $target = $this->getController()->genUrl($params);
