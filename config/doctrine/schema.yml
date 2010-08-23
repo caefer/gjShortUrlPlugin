@@ -1,0 +1,13 @@
+gjShortUrl:
+  actAs:
+    Timestampable:  ~
+  columns:
+    source:         string(255)
+    target:         string(255)
+    code:           integer
+    begins_at:      date
+    expires_at:     date
+  indexes:
+    source_uniq:
+      fields:       source
+      type:         unique
