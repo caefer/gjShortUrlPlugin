@@ -4,7 +4,10 @@ Easy and flexible management of redirect rules and keyword landing pages.
 
 ## About
 
-xxx
+You relaunch your website and need a flexible way to redirect users from the old URLs to the new URL structure?
+You want to create SEO keyword landing pages or campaign pages with nice ans short URLs that expand to i.e. search result page for that keyword/campaign?
+
+Than this plugin is for you!
 
 ## Installation
 
@@ -44,6 +47,16 @@ Generate the admin module in your backend application
     $ php symfony doctrine:generate-admin --module=gjShortUrlAdmin --singular=shorturl --plural=shorturls backend gjShortUrl
 
 Now you can browse `/shorturls` in your backend application and create some redirects.
+
+## Best practice
+
+You will see in the examples that you can define multiple routes to use this plugin. You might wonder where to place them in your `routing.yml`.
+
+gjShortUrlRoute will always query the database for matching the current URL. The more shorturls you have or the more complicated queries you define the more expansive this gets.
+
+It is therefor recommended to put shorturl routes that aim to redirect old URLs at the very bottom of your `routing.yml`.
+
+Landing or campaign pages (i.e. http://your.domain.com/win-an-ipad) are easy matches and should go to the top to prevent them from being matches by previous routes.
 
 ## Redirect lifecycle
 
