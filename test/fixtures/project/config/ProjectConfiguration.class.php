@@ -12,7 +12,7 @@ class ProjectConfiguration extends sfProjectConfiguration
 {
   public function setup()
   {
-    $this->setPlugins(array('gjShortUrlPlugin'));
+    $this->setPlugins(array('sfDoctrinePlugin', 'gjShortUrlPlugin'));
     $this->setPluginPath('gjShortUrlPlugin', dirname(__FILE__).'/../../../..');
   }
 }
