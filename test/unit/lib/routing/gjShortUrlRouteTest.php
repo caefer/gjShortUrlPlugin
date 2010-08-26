@@ -28,7 +28,7 @@ class gjShortUrlRouteTest extends PHPUnit_Framework_TestCase
    * @see gjShortUrlRoute::matchesUrl()
    * @todo Implement!
    */
-  public function testmatchesUrl()
+  public function testMatchesUrl()
   {
     $this->markTestIncomplete('A test for gjShortUrlRoute::matchesUrl() still needs to be implemented!');
   }
@@ -39,7 +39,7 @@ class gjShortUrlRouteTest extends PHPUnit_Framework_TestCase
    * @see gjShortUrlRoute::getObject()
    * @todo Implement!
    */
-  public function testgetObject()
+  public function testGetObject()
   {
     $this->markTestIncomplete('A test for gjShortUrlRoute::getObject() still needs to be implemented!');
   }

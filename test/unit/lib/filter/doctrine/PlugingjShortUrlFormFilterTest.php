@@ -22,4 +22,11 @@
  */
 class PlugingjShortUrlFormFilterTest extends PHPUnit_Framework_TestCase
 {
+  /**
+   * @todo Implement!
+   */
+  public function testMe()
+  {
+    $this->markTestIncomplete('There were no public non-static methods defined in PlugingjShortUrlFormFilter but you should test the class anyway.');
+  }
 }

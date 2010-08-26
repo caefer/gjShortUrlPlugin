@@ -28,7 +28,7 @@ class gjShortUrlPluginConfigurationTest extends PHPUnit_Framework_TestCase
    * @see gjShortUrlPluginConfiguration::initialize()
    * @todo Implement!
    */
-  public function testinitialize()
+  public function testInitialize()
   {
     $this->markTestIncomplete('A test for gjShortUrlPluginConfiguration::initialize() still needs to be implemented!');
   }

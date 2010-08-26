@@ -28,7 +28,7 @@ class PlugingjShortUrlTableTest extends PHPUnit_Framework_TestCase
    * @see PlugingjShortUrlTable::getForParameters()
    * @todo Implement!
    */
-  public function testgetForParameters()
+  public function testGetForParameters()
   {
     $this->markTestIncomplete('A test for PlugingjShortUrlTable::getForParameters() still needs to be implemented!');
   }

@@ -28,7 +28,7 @@ class PlugingjShortUrlFormTest extends PHPUnit_Framework_TestCase
    * @see PlugingjShortUrlForm::setup()
    * @todo Implement!
    */
-  public function testsetup()
+  public function testSetup()
   {
     $this->markTestIncomplete('A test for PlugingjShortUrlForm::setup() still needs to be implemented!');
   }

@@ -22,4 +22,11 @@
  */
 class PlugingjShortUrlTest extends PHPUnit_Framework_TestCase
 {
+  /**
+   * @todo Implement!
+   */
+  public function testMe()
+  {
+    $this->markTestIncomplete('There were no public non-static methods defined in PlugingjShortUrl but you should test the class anyway.');
+  }
 }
