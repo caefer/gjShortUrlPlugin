@@ -26,10 +26,19 @@ class gjShortUrlPluginConfigurationTest extends PHPUnit_Framework_TestCase
    * Test for gjShortUrlPluginConfiguration::initialize()
    *
    * @see gjShortUrlPluginConfiguration::initialize()
-   * @todo Implement!
    */
   public function testInitialize()
   {
-    $this->markTestIncomplete('A test for gjShortUrlPluginConfiguration::initialize() still needs to be implemented!');
+    $this->pluginConfiguration->initialize();
+  }
+
+  protected function setUp()
+  {
+    $projectConfiguration = new ProjectConfiguration(dirname(__FILE__).'/../../fixtures/project/');
+    $this->pluginConfiguration = new gjShortUrlPluginConfiguration($projectConfiguration);
+    if(!sfContext::hasInstance('frontend'))
+    {
+      sfContext::createInstance($this->projectConfiguration->getApplicationConfiguration('frontend', 'test', true));
+    }
   }
 }
