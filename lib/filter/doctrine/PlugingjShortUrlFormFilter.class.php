@@ -3,9 +3,9 @@
 /**
  * PlugingjShortUrl form.
  *
- * @package    ##PROJECT_NAME##
+ * @package    gjShortUrlPlugin
  * @subpackage filter
- * @author     ##AUTHOR_NAME##
+ * @author     Christian Schaefer <schaefer.christian@guj.de>
  * @version    SVN: $Id: sfDoctrineFormFilterPluginTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
 abstract class PlugingjShortUrlFormFilter extends BasegjShortUrlFormFilter
