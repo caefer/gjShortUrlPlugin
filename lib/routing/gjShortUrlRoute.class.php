@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * gjShortUrlRoute
+ * 
+ * @package    gjShortUrlPlugin
+ * @subpackage routing
+ * @author     Christian Schaefer <schaefer.christian@guj.de>
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
+ */
 class gjShortUrlRoute extends sfRequestRoute
 {
   private $shortUrl = false;
