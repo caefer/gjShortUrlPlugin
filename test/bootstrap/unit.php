@@ -38,6 +38,7 @@ else
 function gjShortUrlPlugin_autoload_again($class)
 {
   $autoload = sfSimpleAutoload::getInstance();
+  $autoload->addDirectory(dirname(__FILE__).'/../fixtures/project/lib/');
   $autoload->reload();
   return $autoload->autoload($class);
 }
