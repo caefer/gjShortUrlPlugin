@@ -23,24 +23,56 @@
 class gjShortUrlRouteTest extends PHPUnit_Framework_TestCase
 {
   /**
-   * Test for gjShortUrlRoute::matchesUrl(url, context = Array)
-   *
-   * @see gjShortUrlRoute::matchesUrl()
-   * @todo Implement!
+   * @covers gjShortUrlRoute::getObject
    */
-  public function testMatchesUrl()
+  public function testGetObjectBeforeAnyMatch()
   {
-    $this->markTestIncomplete('A test for gjShortUrlRoute::matchesUrl() still needs to be implemented!');
+    $this->assertFalse($this->route->getObject());
   }
 
   /**
-   * Test for gjShortUrlRoute::getObject()
-   *
-   * @see gjShortUrlRoute::getObject()
-   * @todo Implement!
+   * @covers gjShortUrlRoute::matchesUrl
+   * @depends testGetObjectBeforeAnyMatch
+   */
+  public function testMatchesUrl()
+  {
+    $shortUrl = new gjShortUrl();
+    $shortUrl->source = 'some-short-url';
+    $shortUrl->target = '/redirected';
+    $shortUrl->save();
+
+    $url     = '/some-short-url';
+    $context = array(
+      'path_info'   => '/some-short-url',
+      'prefix'      => '',
+      'method'      => 'GET',
+      'format'      => null,
+      'host'        => 'localhost',
+      'is_secure'   => false,
+      'request_uri' => 'http://localhost/some-short-url?with=query-string'
+    );
+    $parameters = $this->route->matchesUrl($url, $context);
+    $this->assertFalse($parameters);
+  }
+
+  /**
+   * @covers gjShortUrlRoute::getObject
+   * @depends testMatchesUrl
    */
   public function testGetObject()
   {
-    $this->markTestIncomplete('A test for gjShortUrlRoute::getObject() still needs to be implemented!');
+    $this->assertFalse($this->route->getObject());
+  }
+
+  protected function setUp()
+  {
+    global $configuration;
+    $databaseManager = new sfDatabaseManager($configuration);
+    $dbh = new Doctrine_Adapter_Mock('mysql');
+    $conn = Doctrine_Manager::getInstance()->openConnection($dbh, 'mysql', true);
+    Doctrine_Manager::getInstance()->createDatabases('doctrine');
+    Doctrine_Core::createTablesFromArray(array('gjShortUrl'));
+
+    $this->route = new gjShortUrlRoute('/:shorturl', array('module' => 'gjShortUrl', 'action' => 'redirect'));
   }
 }
