@@ -52,7 +52,14 @@ abstract class BasegjShortUrl extends sfDoctrineRecord
 
 
         $this->index('source_uniq', array(
-             'fields' => 'source',
+             'fields' => 
+             array(
+              'source' => 
+              array(
+              'sorting' => 'ASC',
+              'length' => 20,
+              ),
+             ),
              'type' => 'unique',
              ));
     }
