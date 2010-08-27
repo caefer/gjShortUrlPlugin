@@ -9,5 +9,8 @@ gjShortUrl:
     expires_at:     date
   indexes:
     source_uniq:
-      fields:       source
+      fields:
+        source:
+          sorting:  ASC
+          length:   20
       type:         unique
