@@ -7,7 +7,7 @@ Easy and flexible management of redirect rules and keyword landing pages.
 You relaunch your website and need a flexible way to redirect users from the old URLs to the new URL structure?
 You want to create SEO keyword landing pages or campaign pages with nice ans short URLs that expand to i.e. search result page for that keyword/campaign?
 
-Than this plugin is for you!
+Then this plugin is for you!
 
 ## Installation
 
