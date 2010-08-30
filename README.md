@@ -104,7 +104,7 @@ You can allow slashes in the URL with the following route definition (symfony st
       url:   /:shorturl
       param: { module: gjShortUrl, action: redirect }
       options:
-        segment_separators: [ '/', '.', '-' ]
+        segment_separators: [ '.' ]
  
 ### Example 2: Pattern matching redirects
 
